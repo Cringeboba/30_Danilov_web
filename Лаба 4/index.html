@@ -10,6 +10,7 @@
   <header>
     <h1>Умная вилка — ешь медленно, живи лучше!</h1>
     <p>Ты же не хочешь умереть от несварения, правда?</p>
+    <button id="themeToggle">Переключить тему</button>
   </header>
 
   <main>
@@ -92,10 +93,51 @@
       <div class="ad">🚨 Внимание! Без умной вилки ты ешь как дикарь! 🚨</div>
       <div class="ad">🎁 Купи две вилки — получи третью в подарок! 🎁</div>
     </aside>
+
+    <div class="container">
+      <h1>Лента отзывов</h1>
+      
+      <!-- Форма добавления отзыва -->
+      <div class="add-review">
+          <h2>Добавить отзыв</h2>
+          <form id="reviewForm">
+              <input type="text" id="name" placeholder="Ваше имя" required>
+              <textarea id="text" placeholder="Ваш отзыв" required></textarea>
+              <input type="number" id="rating" placeholder="Оценка (1-5)" min="1" max="5" required>
+              <button type="submit">Добавить отзыв</button>
+          </form>
+      </div>
+
+      <!-- Фильтрация и сортировка -->
+      <div class="controls">
+          <label for="filterRating">Фильтр по оценке:</label>
+          <select id="filterRating">
+              <option value="0">Все</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+          </select>
+
+          <label for="sortBy">Сортировать по:</label>
+          <select id="sortBy">
+              <option value="date">Дате</option>
+              <option value="rating">Оценке</option>
+          </select>
+      </div>
+
+      <!-- Лента отзывов -->
+      <div class="reviews-feed" id="reviews-feed">
+          <!-- Отзывы будут добавляться сюда -->
+      </div>
+  </div>
   </main>
 
   <footer>
     <p>© 2025 Умная вилка. Все права защищены. Не ешьте слишком быстро!</p>
   </footer>
+  <script src="js/dark-theme.js"></script>
+  <script src="js/reviews.js"></script>
 </body>
 </html>
