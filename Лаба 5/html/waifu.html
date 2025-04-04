@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waifu.im Viewer</title>
+    <link rel="stylesheet" href="../css/waifu.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Waifu.im</h1>
+            <p>Случайные аниме изображения с API waifu.im</p>
+        </header>
+
+        <div class="controls">
+            <div class="tag-selection">
+                <label for="tags">Выберите теги (через запятую):</label>
+                <input type="text" id="tags" placeholder="Пример: maid,waifu">
+                <small>Популярные теги: maid, waifu, marin-kitagawa, oppai, selfies</small>
+            </div>
+            
+            <div class="nsfw-option">
+                <label>
+                    <input type="checkbox" id="nsfw">
+                    Показывать NSFW контент
+                </label>
+            </div>
+            
+            <button id="load-btn">Загрузить изображение</button>
+        </div>
+
+        <div class="waifu-container">
+            <div class="loader hidden" id="loader">Загрузка...</div>
+            <div class="waifu-image" id="waifu-image">
+                <p>Нажмите кнопку выше, чтобы загрузить изображение</p>
+            </div>
+            <div class="waifu-info" id="waifu-info"></div>
+        </div>
+    </div>
+
+    <script src="../js/waifu.js"></script>
+</body>
+</html>

@@ -72,19 +72,19 @@ class CardManager {
         this.cardsData = [
             {
                 name: "Ублюдок №1 (Клоун)",
-                avatar: "images/Клоун.png",
+                avatar: "../images/Клоун.png",
                 description: "Громко ходит из-за своих больших ног! Бьет лазером, который убивает с одного выстрела. Также берет перерыв после атаки лазером.",
                 link: "https://steamcommunity.com/sharedfiles/filedetails/?id=3438192859"
             },
             {
                 name: "Ублюдок №2 (Монашка)",
-                avatar: "images/Халат.png",
+                avatar: "../images/Халат.png",
                 description: "БЕЗШУМНО передвигается! Также, заметив игрока, начинает движение к нему уже чуть быстрее. Но если игрок посмотрит ему на маску(лицо), то начинает кричать и с очень большой скоростью двигаться к игроку!",
                 link: "https://steamcommunity.com/sharedfiles/filedetails/?id=3438192859"
             },
             {
                 name: "Ублюдок №3 (Утка)",
-                avatar: "images/Утка.png",
+                avatar: "../images/Утка.png",
                 description: "Эта утка следует за самым большим монстром, но когда заметит игрока обязательно будет следовать за игроком и пытаться попасть в его 'перекрестие' что бы обязательно ее потрогали, но стоит это сделать перевоплотится в утку с огромной пастью и начнет вас кусать. чаще всего убивает, но у нее есть КД. если вы быстры или имеете много ХП можно выжить.",
                 link: "https://steamcommunity.com/sharedfiles/filedetails/?id=3438192859"
             }
@@ -100,8 +100,15 @@ class CardManager {
     createHeader() {
         const header = document.createElement('header');
         header.innerHTML = `
-            <h1 id="site-title" contenteditable="false">Топ мобов в R.E.P.O.</h1>
-            <button id="toggle-edit-mode">Режим редактирования</button>
+            <div class="header-content">
+                <div class="header-buttons">
+                    <a href="../html/RAWG.html" class="nav-button">Поиск игр</a>
+                    <a href="../html/waifu.html" class="nav-button">Вайфу</a>
+                    <a href="../html/JSONPlaceholder.html" class="nav-button">Placeholder</a>
+                </div>
+                <h1 id="site-title" contenteditable="false">Топ мобов в R.E.P.O.</h1>
+                <button id="toggle-edit-mode">Режим редактирования</button>
+            </div>
         `;
         document.body.insertBefore(header, document.getElementById('app'));
 
@@ -186,7 +193,7 @@ class CardManager {
     addCard() {
         this.cardsData.push({
             name: "Новый ублюдок",
-            avatar: "images/default.jpg",
+            avatar: "../images/default.jpg",
             description: "Описание нового монстра.",
             link: "Ссылка"
         });

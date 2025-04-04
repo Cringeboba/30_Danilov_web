@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONPlaceholder CRUD</title>
+    <link rel="stylesheet" href="../css/JSONPlaceholder.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>JSONPlaceholder CRUD Operations</h1>
+        <p class="api-info">Working with: <a href="https://jsonplaceholder.typicode.com/posts" target="_blank">https://jsonplaceholder.typicode.com/posts</a></p>
+        
+        <div class="operations">
+            <div class="operation-card">
+                <h2>GET - Прочитать посты</h2>
+                <button id="getPosts">Получить все посты</button>
+                <div class="result" id="getResult">
+                    <div class="loader hidden" id="getLoader"></div>
+                    <div id="getData"></div>
+                </div>
+            </div>
+            
+            <div class="operation-card">
+                <h2>POST - Создать пост</h2>
+                <div class="form-group">
+                    <label for="postTitle">Title:</label>
+                    <input type="text" id="postTitle" placeholder="Введите заголовок">
+                </div>
+                <div class="form-group">
+                    <label for="postBody">Body:</label>
+                    <textarea id="postBody" placeholder="Введите текст"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="postUserId">User ID:</label>
+                    <input type="number" id="postUserId" value="1" min="1">
+                </div>
+                <button id="createPost">Создать пост</button>
+                <div class="result" id="postResult">
+                    <div class="loader hidden" id="postLoader"></div>
+                    <div id="postData"></div>
+                </div>
+            </div>
+            
+            <div class="operation-card">
+                <h2>PUT - Обновление поста (полное)</h2>
+                <div class="form-group">
+                    <label for="putId">Post ID:</label>
+                    <input type="number" id="putId" value="1" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="putTitle">New Title:</label>
+                    <input type="text" id="putTitle" placeholder="Введите новый заголовок">
+                </div>
+                <div class="form-group">
+                    <label for="putBody">New Body:</label>
+                    <textarea id="putBody" placeholder="Введите новый текст"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="putUserId">New User ID:</label>
+                    <input type="number" id="putUserId" value="1" min="1">
+                </div>
+                <button id="updatePost">Обновить</button>
+                <div class="result" id="putResult">
+                    <div class="loader hidden" id="putLoader"></div>
+                    <div id="putData"></div>
+                </div>
+            </div>
+            
+            <div class="operation-card">
+                <h2>PATCH - Обновление сообщения (частичное)</h2>
+                <div class="form-group">
+                    <label for="patchId">Post ID:</label>
+                    <input type="number" id="patchId" value="1" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="patchTitle">New Title (optional):</label>
+                    <input type="text" id="patchTitle" placeholder="Оставьте пустым, чтобы пропустить">
+                </div>
+                <div class="form-group">
+                    <label for="patchBody">New Body (optional):</label>
+                    <textarea id="patchBody" placeholder="Оставьте пустым, чтобы пропустить"></textarea>
+                </div>
+                <button id="patchPost">Обновить</button>
+                <div class="result" id="patchResult">
+                    <div class="loader hidden" id="patchLoader"></div>
+                    <div id="patchData"></div>
+                </div>
+            </div>
+            
+            <div class="operation-card">
+                <h2>DELETE - Удалить пост</h2>
+                <div class="form-group">
+                    <label for="deleteId">Post ID:</label>
+                    <input type="number" id="deleteId" value="1" min="1">
+                </div>
+                <button id="deletePost">Удалить</button>
+                <div class="result" id="deleteResult">
+                    <div class="loader hidden" id="deleteLoader"></div>
+                    <div id="deleteData"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/JSONPlaceholder.js"></script>
+</body>
+</html>
