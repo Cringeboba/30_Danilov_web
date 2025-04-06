@@ -1,0 +1,23 @@
+.link-block a {
+    display: inline-block;
+    color: #0077b5;
+    text-decoration: none;
+    font-size: 14px;
+    word-break: break-all;
+    padding: 6px 10px;
+    margin-top: 8px;
+    transition: all 0.2s;
+  }
+  
+  .link-block a:hover {
+    text-decoration: underline;
+    background-color: #f0f8ff;
+  }
+  
+  .link-block a[contenteditable="true"] {
+    background-color: #e6f2ff;
+    border-radius: 4px;
+    outline: 1px dashed #0077b5;
+    display: inline-block;
+    min-width: 100px;
+  }

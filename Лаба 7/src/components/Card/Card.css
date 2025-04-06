@@ -1,0 +1,52 @@
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 280px;
+  position: relative;
+  margin: 15px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card a {
+  word-wrap: break-word;
+}
+
+.avatar-upload {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.avatar-upload-label {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #0077b5;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.avatar-upload-label:hover {
+  background-color: #005f8b;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card [contenteditable="true"] {
+  background-color: #f0f8ff;
+  padding: 5px;
+  border-radius: 4px;
+  outline: 1px dashed #0077b5;
+  margin: 5px 0;
+}
